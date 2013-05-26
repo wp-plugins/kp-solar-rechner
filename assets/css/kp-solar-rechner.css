@@ -1,0 +1,503 @@
+
+
+#kp-solar-rechner{
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 400;
+  background: url('../img/bg.png') top left no-repeat transparent;
+  width: 322px;
+  height: 490px;
+  position:relative;
+}
+
+#kp-solar-rechner .bold{
+  font-weight: 700;
+}
+
+#kp-solar-rechner .hidden{
+  display:none;  
+}
+
+#kp-solar-rechner-headline{
+  background: url('../img/headline.png') top left no-repeat transparent;
+  display: block;
+  width: 234px;
+  height: 39px;
+  position:absolute;
+  top:20px;
+  left: 35px;
+}
+
+#kp-solar-rechner-display{
+    color: #B25900;
+    font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,monospace;
+    font-size: 34px;
+    height: 36px;
+    left: 77px;
+    line-height: 37px;
+    padding: 0 4px;
+    position: absolute;
+    text-align: right;
+    top: 83px;
+    width: 158px;
+}
+
+#kp-solar-rechner-plz{
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    color: #B25900;
+    font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,monospace;
+    font-size: 15px;
+    height: 16px;
+    left: 101px;
+    padding: 1px 3px 3px 4px;
+    position: absolute;
+    top: 155px;
+    width: 76px;
+    line-height: 15px;
+}
+
+form[name="kp-solar-rechner-form"] > span.error{
+  background: url("../img/plz_invalid.png") no-repeat scroll 0 0 transparent;
+  position: absolute;
+  top:119px;
+  left:98px;
+  width:205px;
+  height:33px;
+}
+
+#kp-solar-rechner-plz.error{
+    background-image: url("../img/plz_invalid.png");
+    background-repeat: no-repeat;
+    background-position: 61px -37px;
+}
+
+#kp-solar-button-calculate{
+    background: url("../img/button_calculate.png") no-repeat scroll 0 0 transparent;
+    cursor: pointer;
+    height: 32px;
+    left: 210px;
+    position: absolute;
+    top: 438px;
+    width: 100px;
+}
+
+#kp-solar-button-calculate:active{
+  background-position:1px 1px;
+}
+
+#kp-solar-rechner #info-overlay-result{
+  height: 177px;
+  top: 182px;
+  z-index: 1;
+}
+
+#kp-solar-rechner #info-overlay-result h1{
+    color: #000000;
+    font-size: 16px;
+    line-height: 21px;
+    margin: 21px 0 10px 19px;
+}
+
+#kp-solar-rechner #info-overlay-result p{
+    color: #666666;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 14px;
+    margin-left: 19px;
+    width: 161px;
+}
+
+#kp-solar-rechner #info-overlay-result img{
+    left: 187px;
+    position: absolute;
+    top: 94px;
+}
+
+/*period switch*/
+#kp-solar-rechner .period-1, #kp-solar-rechner .period-2, #kp-solar-rechner .period-3{
+    height: 15px;
+    left: 249px;
+    position: absolute;
+    top: 139px;
+    width: 58px;
+    cursor:pointer;
+}
+
+#kp-solar-rechner .period-2{
+    top:152px;
+}
+
+#kp-solar-rechner .period-3{
+    top:165px;
+}
+
+#kp-solar-rechner .period-selected{
+  background: url('../img/switch.png') top right no-repeat transparent;
+}
+
+/*button rows*/
+#kp-solar-rechner .button-row{
+    left: 98px;
+    position: absolute;
+    top: 189px;
+    width: 215px;
+    height:40px;
+}
+
+#kp-solar-rechner .button{
+    background: url("../img/button_calc_black.png") no-repeat scroll left top transparent;
+    color: #cbcbcb;
+    cursor: pointer;
+    display: inline-block;
+    zoom: 1;  *display: inline;  /* IE7 Hack */
+    font-size: 10px;
+    height: 32px;
+    margin: 0;
+    padding: 4px 0;
+    text-align: center;
+    width: 42px;
+    line-height:12px;
+    vertical-align:top;
+    
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#kp-solar-rechner .button.single-row{
+    padding: 10px 0;
+}
+
+#kp-solar-rechner .button.selected{
+  background: url("../img/button_calc_orange.png") no-repeat scroll left top transparent;
+  color:#000000;
+}
+
+#kp-solar-rechner .button.disabled{
+  background: url("../img/button_calc_black_pressed.png") no-repeat scroll left top transparent;
+  color:#4c4c4c;
+  pointer-events: none;
+  cursor:pointer;
+}
+
+#kp-solar-rechner .button.pressed{
+  background: url("../img/button_calc_black_pressed.png") no-repeat scroll left top transparent;
+}
+
+#kp-solar-rechner .button-row .button input{
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    font-size: 10px;
+    height: 9px;
+    left: 1px;
+    padding: 1px;
+    position: relative;
+    width: 26px;
+    text-align:center;
+    margin-bottom: 2px;
+    color:#333333;
+    line-height:10px;
+}
+
+#kp-solar-rechner .button-row.usage{
+  top: 228px;
+}
+
+#kp-solar-rechner .button-row.disposition{
+  top: 267px;
+}
+
+#kp-solar-rechner .button-row.direction{
+  top: 306px;
+}
+
+#kp-solar-rechner .button-row.selfusage{
+  top: 343px;
+}
+
+/*simple buttons*/
+#kp-solar-rechner .button-row.extension{
+    top: 380px; 
+    left: 99px;
+}
+
+#kp-solar-rechner .button-row.type{
+    top: 408px; 
+    left: 99px;
+}
+
+#kp-solar-rechner .simple-button{
+    background: url("../img/button_black_bg.png") repeat-x scroll left top transparent;
+    color: #cccccc;
+    cursor: pointer;
+    display: inline-block;
+    zoom: 1;  *display: inline;  /* IE7 Hack */
+    font-size: 10px;
+    height: 16px;
+    margin: 0 1px 0 0;
+    padding: 4px 0;
+    text-align: center;
+    line-height:17px;
+    vertical-align:top;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;   
+    border-right:1px solid #191919;
+    border-left:1px solid #2f2f2f;
+}
+
+#kp-solar-rechner .simple-button:active{
+  background-position:1px 1px;
+}
+
+#kp-solar-rechner .simple-button.selected{
+  background: url("../img/button_orange_bg.png") repeat-x scroll left top transparent;
+  color: #000000;
+}
+
+#kp-solar-rechner .simple-button.extension-no{
+    width: 123px;   
+}
+
+#kp-solar-rechner .simple-button.extension-yes{
+    width: 82px;
+}
+
+#kp-solar-rechner .simple-button.type-amorph{
+    width: 49px;
+}
+
+#kp-solar-rechner .simple-button.type-poly{
+    width: 71px;
+}
+
+#kp-solar-rechner .simple-button.type-mono{
+    width: 82px;
+}
+
+  
+/*popups*/
+#kp-solar-rechner .info-popup{
+  width:80px;
+  height:15px;
+  position:absolute;
+  left:10px;
+  display:block;
+  cursor:pointer;
+}
+
+#kp-solar-rechner .info-popup-container{
+  width:150px;
+  min-height:30px;
+  position:absolute;
+  font-size:9px;
+  padding:8px;
+  
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  
+  -webkit-box-shadow: 1px 1px 4px #000000; 
+  -moz-box-shadow: 1px 1px 4px #000000; 
+  box-shadow: 1px 1px 4px #000000;
+  background-color:#ffffd9;
+}
+
+#kp-solar-rechner .info-popup-container div{
+  background: url('../img/tooltip_bottom.png');
+  position:absolute;
+  width:18px;
+  height:14px;
+  bottom:-10px;
+  left:20px;
+  z-index:1;
+}
+
+#kp-solar-rechner .info-popup.plz{
+    top: 156px;
+    width: 36px;
+}
+
+#kp-solar-rechner .info-popup.size{
+    top:198px;
+}
+
+#kp-solar-rechner .info-popup.usage{
+    top:236px;
+}
+
+#kp-solar-rechner .info-popup.disposition{
+    top:275px;
+}
+
+#kp-solar-rechner .info-popup.direction{
+    top: 314px;
+    width: 86px;
+}
+
+#kp-solar-rechner .info-popup.selfusage{
+  top:352px;
+}
+
+#kp-solar-rechner .info-popup.extension{
+    top: 385px;
+    width: 69px;
+}
+
+#kp-solar-rechner .info-popup.type{
+    top: 410px;
+    width: 57px;
+}
+
+/*overlays*/
+#kp-solar-rechner .info-overlay{
+  width:302px;
+  height:15px;
+  position:absolute;
+  left:8px;
+  bottom:8px;
+  display:block;
+  cursor:pointer;
+}
+
+#kp-solar-rechner .overlay-container h1{
+  font-size:12px;
+  font-weight:bold;  
+}
+
+#kp-solar-rechner .overlay-container{
+  width:290px;
+  min-height:30px;
+  position:absolute;
+  font-size:9px;
+  padding:8px;
+  z-index:2;
+  left:8px;
+  bottom:8px;
+  
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  
+  -webkit-box-shadow: 1px 1px 4px #000000; 
+  -moz-box-shadow: 1px 1px 4px #000000; 
+  box-shadow: 1px 1px 4px #000000;
+  background-color:#ffffff;
+  opacity:0.96;
+  
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=96)";
+  filter: alpha(opacity=96);
+  -moz-opacity:0.96;
+  -khtml-opacity: 0.96;
+  opacity: 0.96;
+}
+
+#kp-solar-rechner .overlay-container .close{
+  position:absolute;
+  right:18px;
+  top:18px;
+  cursor:pointer;
+}
+
+#kp-solar-rechner .info-overlay.calculation{
+    left: 15px;
+    top: 467px;
+    width: 170px;
+    color:#808080;
+}
+
+#kp-solar-rechner .info-overlay.calculation span{
+  text-decoration: underline;
+}
+ 
+/*contact from*/
+#info-overlay-contact.overlay-container{
+    color: #000000;
+    font-size: 10px;
+    height: 261px;
+    padding: 28px 10px 5px;
+    z-index: 1;
+}
+
+#info-overlay-contact.overlay-container strong{
+  color:#4c9900;
+}
+
+#info-overlay-contact.overlay-container h1{
+  font-size:16px;
+  margin-top: 10px;
+}
+
+#info-overlay-contact.overlay-container input[type=text]{
+    background-color: #FFFFFF;
+    border: 1px solid #D2D2D2;
+    border-radius: 4px 4px 4px 4px;
+    font-size: 12px;
+    height: 18px;
+    left: 64px;
+    padding: 1px 3px;
+    position: absolute;
+    width: 130px;
+    color:#000;
+}
+
+#info-overlay-contact.overlay-container input[type=radio]{
+  margin-left:22px;  
+}
+
+#info-overlay-contact.overlay-container fieldset{
+  margin-top:10px;
+}
+
+#info-overlay-contact.overlay-container fieldset div{
+  margin-bottom:10px;
+}
+
+#info-overlay-contact.overlay-container fieldset div:first-child{
+  margin-bottom:5px;
+}
+
+#info-overlay-contact.overlay-container .sidebar{
+    position: absolute;
+    right: 8px;
+    top: 123px;
+}
+
+#kp-solar-button-submit{
+    background: url("../img/button_submit_form.png") no-repeat scroll 0 0 transparent;
+    cursor: pointer;
+    height: 33px;
+    left: 63px;
+    position: absolute;
+    top: 253px;
+    width: 143px;
+    border:none;
+}
+
+#kp-solar-button-submit:active{
+  background-position:1px 1px;
+}
+
+#info-overlay-contact.overlay-container input[type="text"].error, #info-overlay-contact.overlay-container input[type="text"].valid {
+    background-image: url("../img/inline_validation.png");
+    background-repeat: no-repeat;
+}
+#info-overlay-contact.overlay-container input[type="text"].error {
+    background-color: #FBE3E4;
+    background-position: right -34px;
+    border: 1px solid #FBC2C4;
+    color: #8A1F11;
+}
+#info-overlay-contact.overlay-container input[type="text"].valid {
+    background-position: right 0;
+}
