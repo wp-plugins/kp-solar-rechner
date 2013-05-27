@@ -1,4 +1,4 @@
-
+@import url('http://fonts.googleapis.com/css?family=PT+Sans:400,700');
 
 #kp-solar-rechner{
   font-family: 'PT Sans', sans-serif;
@@ -297,7 +297,7 @@ form[name="kp-solar-rechner-form"] > span.error{
 }
 
 #kp-solar-rechner .info-popup-container{
-  width:150px;
+  width:160px;
   min-height:30px;
   position:absolute;
   font-size:9px;
