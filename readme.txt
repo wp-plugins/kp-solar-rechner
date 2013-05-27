@@ -11,7 +11,7 @@ Das Käuferportal Solarrechner-Plugin ermöglicht, einen Solarrechner als Widget
 
 == Description ==
 
-Das [Käuferportal](http://kaeuferportal.de/ "Käuferportal")-Solarrechner-Plugin ermöglicht, einen Solarrechner als Widget in Deinem Blog zu integrieren. Der Solarrechner berechnet die Ersparnis einer Solaranlage. Er hat eine große Anzahl an Einstellmöglichkeiten und berücksichtigt unter anderem den Eigenverbrauch. Ein Highlight ist die Einbeziehung der monatlichen Degression der Einspeisevergütung. 
+Das [Käuferportal](http://www.kaeuferportal.de/solaranlagen-kaufberatung/solaranlagen-135 "Käuferportal")-Solarrechner-Plugin ermöglicht, einen Solarrechner als Widget in Deinem Blog zu integrieren. Der Solarrechner berechnet die Ersparnis einer Solaranlage. Er hat eine große Anzahl an Einstellmöglichkeiten und berücksichtigt unter anderem den Eigenverbrauch. Ein Highlight ist die Einbeziehung der monatlichen Degression der Einspeisevergütung. 
 
 Einstellmöglichkeiten des Solarrechners:
 

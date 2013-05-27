@@ -1,5 +1,5 @@
 <div id="kp-solar-rechner">
-  <a href="www.kaeuferportal.de" target="_blank" id="kp-solar-rechner-headline"></a>
+  <a href="http://www.kaeuferportal.de/solaranlagen-kaufberatung/solaranlagen-135" target="_blank" id="kp-solar-rechner-headline"></a>
   
   <div id="kp-solar-rechner-display">0</div>
   
