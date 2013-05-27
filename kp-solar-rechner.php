@@ -27,9 +27,6 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-define('KP_SOLAR_RECHNER_ASSET_BASE_URL',  plugin_dir_url(__FILE__).'assets/'); 
-define('KP_SOLAR_RECHNER_TEMPLATE',   plugin_dir_path(__FILE__).'template.php');
-
 class KP_Solar_Rechner_Widget extends WP_Widget{
   public function __construct(){
     $name = 'Käuferportal Solar-Rechner Widget';
@@ -51,14 +48,14 @@ class KP_Solar_Rechner_Widget extends WP_Widget{
     if ( is_active_widget( false, false, $this->id_base, true ) 
     && !is_admin()) {
       wp_enqueue_script('kp-solar-rechner', self::get_asset_path('js/kp-solar-rechner.js'), array('jquery'));
-      wp_enqueue_script('kp-solar-rechner-model', self::get_asset_path('js/solarcalc.js'));
+      wp_enqueue_script('kp-solar-rechner-calc', self::get_asset_path('js/solarcalc.js'));
       wp_enqueue_style( 'kp-solar-rechner', self::get_asset_path('css/kp-solar-rechner.css'));
       wp_enqueue_script('jquery.validate', 'http://www.kaeuferportal.de/javascripts/jquery.validate.js', array('jquery') );
     }
   }
 
   public function widget($args, $instance){
-    include KP_SOLAR_RECHNER_TEMPLATE;
+    include plugin_dir_path(__FILE__).'template.php';
   }
 
   public function img_path($relativePath){
@@ -76,7 +73,7 @@ class KP_Solar_Rechner_Widget extends WP_Widget{
   }
   
   public static function get_asset_path($relativePath){
-    return KP_SOLAR_RECHNER_ASSET_BASE_URL.$relativePath;
+    return plugin_dir_url(__FILE__).'assets/'.$relativePath;
   }
   
   public static function register(){
