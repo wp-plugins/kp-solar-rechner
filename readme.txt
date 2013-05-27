@@ -1,44 +1,38 @@
 === Käuferportal Solarrechner-Plugin ===
 Contributors: kaeuferportal  
-Tags: solar, photovoltaik, calculator, widget
+Tags: solar, photovoltaik, solaranlage, calculator, rechner, widget
 Requires at least: 2.8
 Tested up to: 3.5
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Das Käuferportal Solarrechner-Plugin ermöglicht, einen Solarrechner als Widget in deinen Blog zu integrieren.
+Das Käuferportal Solarrechner-Plugin ermöglicht, einen Solarrechner als Widget in Deinen Blog zu integrieren.
 
 == Description ==
 
-Das [Käuferportal](http://kaeuferportal.de/ "Käuferportal")-Solarrechner-Plugin ermöglicht, einen Solarrechner als Widget in Deinem Blog zu integrieren. Der Solarrechner berechnet die Ersparnis einer Solaranlage. Er hat eine große Anzahl an Einstellmöglichkeiten und berücksichtigt den Eigenverbrauch. Ein Highlight ist die Einbeziehung der monatlichen Degression der Einspeisevergütung. 
-
-
+Das [Käuferportal](http://kaeuferportal.de/ "Käuferportal")-Solarrechner-Plugin ermöglicht, einen Solarrechner als Widget in Deinem Blog zu integrieren. Der Solarrechner berechnet die Ersparnis einer Solaranlage. Er hat eine große Anzahl an Einstellmöglichkeiten und berücksichtigt unter anderem den Eigenverbrauch. Ein Highlight ist die Einbeziehung der monatlichen Degression der Einspeisevergütung. 
 
 Einstellmöglichkeiten des Solarrechners:
 
+* Postleitzahl - Die Eingabe einer korrekten PLZ ist essentiell für eine exakte Lokalisierung des Standpunktes und die daraus resultierende Berechnung des Sonneneinstrahlpotenziales. Jede Region in der Bundesrepublik hat eine unterschiedliche Sonneinstrahlung.
 
+* Fläche der Solaranlage - Diese Angabe richtet sich nach der zur Verfügung stehenden Dachfläche, abzüglich der Flächen für Schornstein und Dachflächenfenster. 
 
-* Postleitzahl - Die Eingabe einer korrekten PLZ ist essentiell für eine exakte Lokalisierung Ihres Standpunktes und die daraus resultierende Berechnung des Sonneneinstrahlpotenziales (jede Region in der Bundesrepublik hat eine unterschiedliche Sonneinstrahlung).
+* Stromverbrauch - Der jährliche Stromverbrauch kann der letzten Abrechnung entnommen werden. Eine Orientierung geben diese Werte: Singlehaushalt 1.500 kWh, Zwei-Personen-Haushalt 2.500 kWh, Familienhaushalt 4.500 kWh.
 
-* Fläche der Solaranlage - Diese Angabe richtet sich stark nach der zur Verfügung stehenden Dachfläche, abzüglich der Flächen für Schornstein, Dachflächenfenster und jeglicher anderer störender Einflüsse. Grundsätzlich ist davon auszugehen, je größer Ihre neue Anlage ist, desto mehr Ersparniss erzielen Sie.
+* Dachneigung – Die optimale Dachneigung liegt zwischen 30° - 35°. Montagegerüsten gleichen andere Dachneigungen aus. 
 
-* Stromverbrauch - Ihren jährlichen Stromverbrauch finden Sie auf Ihrer letzten Stromrechnung. 
-Zur Orientierung eignen sich auch diese Werte: Singlehaushalt 1500kWh, Pärchen Haushalt 2500kWh, Familienhaushalt 4000kWh und Großfamilien 6000kWh.
+* Dachausrichtung – Ein Dach mit Südlage erzielt die höchsten Erträge. 
 
-* Dachneigung - Bei einer Dachneigung von etwa 30° erzielen Sie die besten Ergebnisse in der Erzeugung von Solarstrom mittels einer Solaranlage.
+* Solarspeicher – Moderne Speichersysteme können den gesamten am Tage produzierten Sonnenstrom speichern und bei Bedarf wieder abgeben. Dadurch ist ein Eigenverbrauch von bis zu 75 Prozent möglich. 
 
-* Dachausrichtung - Die Dachausrichtung ist neben der Dachneigung das wichtigste Kriterium für die Effektivität einer Solaranlage. Ein nach Süden ausgerichtetes Dach erzielt die besten Ergebnisse.
+* Eigenverbrauch - Wer seinen Strom selbst verbraucht, profitiert gleich doppelt. Er wird unabhängig von Preiserhöhungen, schont die Umwelt und spart viel Geld.
 
-* Solarspeicher - Mit einem Solarspeicher steigern Sie Ihre Unabhängigkeitsquote und fördern Ihre Eigenverbrauchschancen. Eine sinkende Stromrechnung und ein gelassenerer Blick auf die Strompreiserhöhungen sind positive Nebeneffekte. Ohne Solarspeicher ist der Strombezug um ein vielfaches höher, bedingt durch den Solarstromerzeugungszeitraum von 7:00-19:00Uhr. 
+* Modulart: **Monokristalline** Module haben einen sehr hohen Wirkungsgrad (18%) und sind preisintensiv. **Polykristalline** Module haben einen normalen Wirkungsgrad (11-14%) und günstiger als monokristalline Module. **Amorphe** Module haben mit Abstand die geringsten Herstellungskosten und einen niedrigeren Wirkungsgrad (6-8%).
 
-* Eigenverbrauch - Die Rentabilität Ihrer Solaranlage ist enorm abhängig von Ihrem 
-Eigenverbrauchsanteil. Unabhängig wie hoch dieser Anteil ausfällt, kann so festgestellt werden ob sich Ihre neue Anlage eher für den Eigenverbrauch oder die Einspeisung eignen würde.
+Nach Eingabe aller Informationen, zeigt das Programm die mögliche Ersparnis durch die Installation einer Solaranlage an. Zusätzlich kann der Nutzer entscheiden, die ermittelten Daten zu übersenden und daraufhin eine kostenlose und unverbindliche Beratung zu erhalten. Käuferportal ist ein Spezialist in Sachen Solar und Photovoltaik.
 
-* Modulart: **Monokristalline** Module haben einen sehr hohen Wirkungsgrad (18%) und sind preisintensiv. **Polykristalline** Module haben einen normalen Wirkungsgrad (11-14%) und günstiger als monokristalline Module. **Amorphe** Module haben mit Abstand die geringsten Herstellungskosten, aber auch einen niedrigen Wirkungsgrad (6-8%).
-
-
-Diese Werte werden verrechnet und der Ertrag ausgegeben. Da Käuferportal ein Spezialist in Sachen Solar und Photovoltaik ist wird nach der Berechnung ein Formular angezeigt, mit dem man die ermittelten Daten übersenden kann und daraufhin eine unverbindliche Beratung erhält.
 
 == Installation ==
 
