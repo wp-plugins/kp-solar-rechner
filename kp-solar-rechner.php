@@ -3,7 +3,7 @@
 Plugin Name: KP Solar-Rechner
 Plugin URI: http://www.geekyweekly.com/mypageorder
 Description: Der Käuferportal Solarrechner errechnet den Ertrag einer Solaranlage und kann als Widget in den Blog eingebunden werden.
-Version: 1.0.0
+Version: 1.0.1
 Author: Käuferportal
 Author URI: http://www.kaeuferportal.de
 Author Email: wordpress.solarrechner@kaeuferportal.de
@@ -79,6 +79,16 @@ class KP_Solar_Rechner_Widget extends WP_Widget{
   public static function register(){
     register_widget('KP_Solar_Rechner_Widget');
   }
+  
+  function shortcode($atts){
+    $widget = new self();
+    
+    ob_start();
+    $widget->widget(array(), array());
+    return ob_get_clean();
+  }
 }
 
 add_action('widgets_init', 'KP_Solar_Rechner_Widget::register');
+
+add_shortcode( 'kp_solar_rechner', 'KP_Solar_Rechner_Widget::shortcode' );
