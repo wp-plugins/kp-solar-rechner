@@ -80,7 +80,7 @@ class KP_Solar_Rechner_Widget extends WP_Widget{
     register_widget('KP_Solar_Rechner_Widget');
   }
   
-  function shortcode($atts){
+  public static function shortcode($atts){
     $widget = new self();
     
     ob_start();
