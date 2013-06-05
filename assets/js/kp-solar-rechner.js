@@ -106,7 +106,7 @@ jQuery(function($){
   /*form setup*/
   $('.kp-solar-rechner-input-custom').val($('.kp-solar-rechner-input-custom').val()+window.location.href);
   
-  $('form[name="kp-solar-rechner-form"]').validate({errorElement: 'span',  submitHandler: function(form) {
+  $('form[name="kp-solar-rechner-form"]').validate({errorElement: 'div',  submitHandler: function(form) {
     form.submit();
     $('#info-overlay-contact').fadeOut();
     $('#info-overlay-result').fadeIn();
@@ -114,14 +114,15 @@ jQuery(function($){
   }});
   
   /*calculate button*/
+  //$('#kp-solar-rechner-plz').focus();
   $('#kp-solar-button-calculate').mouseup(function(){
-      if(!model.wasFirstSelected())
-        return ;
+    var plzElement = $('#kp-solar-rechner-plz');
+    if(!plzElement.valid())
+      return ;
+    
+    if(!model.wasFirstSelected())
+      return ;
       
-      var plzElement = $('#kp-solar-rechner-plz');
-      if(!plzElement.valid())
-        return ;
-        
       model.setPlz(plzElement.val());
       $('#kp-solar-rechner-display').text(
           model.getResult());

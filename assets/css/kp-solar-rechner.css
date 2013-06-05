@@ -57,19 +57,14 @@
     line-height: 15px;
 }
 
-form[name="kp-solar-rechner-form"] > span.error{
+form[name="kp-solar-rechner-form"] > div.error{
   background: url("../img/plz_invalid.png") no-repeat scroll 0 0 transparent;
   position: absolute;
   top:119px;
   left:98px;
   width:205px;
   height:33px;
-}
-
-#kp-solar-rechner-plz.error{
-    background-image: url("../img/plz_invalid.png");
-    background-repeat: no-repeat;
-    background-position: 61px -37px;
+  z-index:1000;
 }
 
 #kp-solar-button-calculate{
@@ -413,7 +408,7 @@ form[name="kp-solar-rechner-form"] > span.error{
 #kp-solar-rechner .info-overlay.calculation{
     left: 15px;
     top: 467px;
-    width: 170px;
+    width: 200px;
     color:#808080;
 }
 

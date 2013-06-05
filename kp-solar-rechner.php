@@ -2,8 +2,8 @@
 /*
 Plugin Name: KP Solar-Rechner
 Plugin URI: http://wordpress.org/plugins/kp-solar-rechner/
-Description: Der Käuferportal Solarrechner errechnet den Ertrag einer Solaranlage und kann als Widget in den Blog eingebunden werden.
-Version: 1.0.1
+Description: Der Käuferportal Solarrechner errechnet den Ertrag einer Solaranlage und kann als Widget oder Shortcode [kp_solar_rechner] in den Blog eingebunden werden.
+Version: 1.1.0
 Author: Käuferportal
 Author URI: http://www.kaeuferportal.de
 Author Email: wordpress.solarrechner@kaeuferportal.de
@@ -45,8 +45,7 @@ class KP_Solar_Rechner_Widget extends WP_Widget{
 
     $this->WP_Widget( $idBase, $name, $widget_ops, $control_ops );
 
-    if ( is_active_widget( false, false, $this->id_base, true ) 
-    && !is_admin()) {
+    if (!is_admin()) {
       wp_enqueue_script('kp-solar-rechner', self::get_asset_path('js/kp-solar-rechner.js'), array('jquery'));
       wp_enqueue_script('kp-solar-rechner-calc', self::get_asset_path('js/solarcalc.js'));
       wp_enqueue_style( 'kp-solar-rechner', self::get_asset_path('css/kp-solar-rechner.css'));
