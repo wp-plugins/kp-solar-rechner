@@ -28,6 +28,13 @@
   text-indent:-9999px;
 }
 
+#kp-solar-rechner .euro{
+  display: block;
+  left: 220px;
+  position: relative;
+  top: 83px;
+}
+
 #kp-solar-rechner-display{
     color: #B25900;
     font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,monospace;
@@ -39,7 +46,7 @@
     position: absolute;
     text-align: right;
     top: 83px;
-    width: 158px;
+    width: 135px;
 }
 
 #kp-solar-rechner-plz{
@@ -64,7 +71,12 @@ form[name="kp-solar-rechner-form"] > div.error{
   left:98px;
   width:205px;
   height:33px;
-  z-index:1000;
+}
+
+#kp-solar-rechner-plz.error{
+    background-image: url("../img/plz_invalid.png");
+    background-repeat: no-repeat;
+    background-position: 61px -37px;
 }
 
 #kp-solar-button-calculate{
@@ -408,7 +420,7 @@ form[name="kp-solar-rechner-form"] > div.error{
 #kp-solar-rechner .info-overlay.calculation{
     left: 15px;
     top: 467px;
-    width: 200px;
+    width: 170px;
     color:#808080;
 }
 

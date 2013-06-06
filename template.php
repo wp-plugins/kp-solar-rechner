@@ -2,10 +2,12 @@
   <a href="http://www.kaeuferportal.de/solaranlagen-kaufberatung/solaranlagen-135" target="_blank" id="kp-solar-rechner-headline">Solaranlagen bei Käuferportal</a>
   
   <div id="kp-solar-rechner-display">0</div>
+  <?php $this->img('euro.png', 'euro'); ?>
   
   <iframe name="hidden-post-frame" style="display:none; visibility:hidden; "></iframe>
   <form method="post" accept-charset="UTF-8" target="hidden-post-frame" name="kp-solar-rechner-form"  action="http://www.kaeuferportal.de/solaranlagen/angebot-erhalten/3?class=wordpress-plugin">
-    <input type="text" class="v_zip required" id="kp-solar-rechner-plz" value="10???" name="kaeufer_kontakt[postleitzahl]"/>
+    <input type="text" class="v_zip" id="kp-solar-rechner-plz" value="10???" name="kaeufer_kontakt[postleitzahl]"/>
+    
     <input type="hidden" value="30" name="produktanfrage_produkt_id">
     <input type="hidden" value="solaranlagen" name="callname">
     <input type="hidden" class="kp-solar-rechner-input-custom" value="anfrage-element=wordpress-plugin&amp;form-referer=" name="custom">

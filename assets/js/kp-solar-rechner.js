@@ -114,15 +114,14 @@ jQuery(function($){
   }});
   
   /*calculate button*/
-  //$('#kp-solar-rechner-plz').focus();
   $('#kp-solar-button-calculate').mouseup(function(){
     var plzElement = $('#kp-solar-rechner-plz');
     if(!plzElement.valid())
       return ;
     
-    if(!model.wasFirstSelected())
-      return ;
-      
+      if(!model.wasFirstSelected())
+        return ;
+        
       model.setPlz(plzElement.val());
       $('#kp-solar-rechner-display').text(
           model.getResult());
